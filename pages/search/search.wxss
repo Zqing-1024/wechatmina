@@ -1,0 +1,37 @@
+/* 搜索页面样式 */
+page {
+  background-color: #f3f4f6;
+  padding: 20rpx;
+}
+/* input输入框和按钮样式 */
+.search .search_row {
+  display: flex;
+  height: 60rpx;
+}
+.search .search_row input {
+  flex: 1;
+  background-color: #fff;
+  height: 100%;
+  margin-right: 20rpx;
+  padding-left: 20rpx;
+}
+.search .search_row button {
+  width: 150rpx;
+  height: 100%;
+  min-height: 100%;
+  font-size: 24rpx;
+  background-color: #fff;
+}
+/* 搜索出来内容列表的样式 */
+.search .search_content {
+  margin-top: 30rpx;
+}
+.search .search_content .search_item {
+  background-color: #fff;
+  font-size: 26rpx;
+  padding: 15rpx 15rpx;
+  border-bottom: 2rpx solid #ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

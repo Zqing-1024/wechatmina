@@ -1,0 +1,6 @@
+<!-- 支付授权页面 -->
+<view class="auth">
+  <button type="primary" plain="{{true}}" open-type="getUserInfo" bind:getuserinfo="handleGetUserInfo">
+    支付授权
+  </button>
+</view>

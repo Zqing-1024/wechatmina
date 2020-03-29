@@ -1,0 +1,70 @@
+<view class="cart">
+  <!-- 添加收货地址区域 -->
+  <view class="add_address_row">
+    <!-- 如果没地址显示获取地址按钮 -->
+    <view class="button_container" wx:if="{{!address.userName}}">
+      <button type="primary" plain="{{true}}" bind:tap="tapChooesAddress">添加收货地址</button>
+    </view>
+    <!-- 如果有地址显示地址 -->
+    <view class="address_info_container" wx:else>
+      <view class="user_info">
+        <view>收货人：{{address.userName}}</view>
+        <view>{{address.all}}</view>
+      </view>
+      <view class="user_phone">{{address.telNumber}}</view>
+    </view>
+  </view>
+  <!-- 购物车商品内容区域 -->
+  <view class="cart_list_container">
+    <view class="cart_title">购物车</view>
+    <view class="cart_main">
+      <!-- 如果购物车有内容 -->
+      <block wx:if="{{cart.length!==0}}">
+        <view class="cart_item" wx:for="{{cart}}" wx:for-index="index" wx:for-item="item" wx:key="goods_id">
+          <view class="cart_chk_warp">
+            <checkbox-group bind:change="itemChange" data-id="{{item.goods_id}}">
+              <checkbox checked="{{item.checked}}"></checkbox>
+            </checkbox-group>
+          </view>
+          <navigator class="cart_img_warp">
+            <image src="{{item.goods_small_logo}}" mode="widthFix" />
+          </navigator>
+          <view class="cart_info_warp">
+            <view class="goods_name">{{item.goods_name}}</view>
+            <view class="goods_price_warp">
+              <view class="goods_price">￥{{item.goods_price}}</view>
+              <view class="cart_num_tool">
+                <view class="num_edit" bind:tap="editNum" data-id="{{item.goods_id}}" data-symbol="-">
+                  -
+                </view>
+                <view class="goods_num">{{item.num}}</view>
+                <view class="num_edit" bind:tap="editNum" data-id="{{item.goods_id}}" data-symbol="+">
+                  +
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1580150469413&di=9d1806009e97434d0f9d6792997321af&imgtype=0&src=http%3A%2F%2Fm.hua.com%2Fimages%2Fgwc_k.png" mode="widthFix" lazy-load="false"></image>
+      </block>
+    </view>
+  </view>
+  <!-- 购物车结算区域 -->
+  <view class="footer_tool">
+    <view class="all_chk_warp">
+      <checkbox-group bind:change="allchk">
+        <checkbox checked="{{allChecked}}">全选</checkbox>
+      </checkbox-group>
+    </view>
+    <view class="total_price_warp">
+      <view class="total_price">
+        合计：
+        <text class="total_price_text">￥{{totalPrice}}</text>
+      </view>
+      <view>包含运费</view>
+    </view>
+    <view class="order_pay_warp" bind:tap="tapPay">结算({{totalNum}})</view>
+  </view>
+</view>

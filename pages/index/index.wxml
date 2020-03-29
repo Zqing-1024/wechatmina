@@ -1,0 +1,33 @@
+<!-- 搜索框组件 -->
+<SearchInput></SearchInput>
+<!-- 轮播图 -->
+<view class="index_swiper">
+  <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{swiperList}}" wx:key="gooods_id">
+      <navigator class="" target="" url="../goods_detail/goods_detail?goods_id={{item.goods_id}}" hover-class="navigator-hover" open-type="navigate">
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 导航区域 -->
+<view class="index_cates">
+  <navigator wx:for="{{catesList}}" wx:key="image_src" url="../category/category" open-type="switchTab" hover-class="navigator-hover">
+    <image src="{{item.image_src}}" mode="widthFix"></image>
+  </navigator>
+</view>
+<!-- 楼层区域 -->
+<view class="index_floor">
+  <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1">
+    <!-- 标题区域 -->
+    <view class="floor_title">
+      <image src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+    </view>
+    <!-- 内容区域 -->
+    <view class="floor_list">
+      <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="index2" class="{{index2==0?'one':''}}" url="../goods_list/goods_list?cid=927">
+        <image src="{{item2.image_src}}"></image>
+      </navigator>
+    </view>
+  </view>
+</view>

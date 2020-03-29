@@ -1,0 +1,47 @@
+.index_swiper swiper {
+  height: 340rpx;
+}
+.index_swiper image {
+  width: 750rpx;
+}
+.index_cates {
+  display: flex;
+}
+.index_cates navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+.index_cates image {
+  width: 100%;
+}
+.floor_title image {
+  width: 100%;
+  margin: 8rpx 0;
+}
+.floor_list {
+  clear: both;
+}
+.floor_list navigator {
+  float: left;
+}
+.floor_list .one {
+  width: 250rpx;
+  height: 400rpx;
+  border-right: 8rpx solid white;
+}
+.floor_list :nth-of-type(n + 2) {
+  width: 250rpx;
+  height: 200rpx;
+}
+.floor_list image {
+  width: 100%;
+  height: 100%;
+}
+.floor_list :nth-of-type(2),
+.floor_list :nth-of-type(4) {
+  border-right: 8rpx solid white;
+}
+.floor_list :nth-of-type(2),
+.floor_list :nth-of-type(3) {
+  border-bottom: 8rpx solid white;
+}

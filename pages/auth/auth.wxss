@@ -1,0 +1,6 @@
+.auth {
+  padding-top: 40rpx;
+}
+.auth button {
+  width: 70%;
+}

@@ -1,0 +1,80 @@
+<view class="user">
+  <view class="user_image_wrap">
+    <block wx:if="{{userInfo}}">
+      <view class="user_image">
+        <image class="user_bg" src="{{userInfo.avatarUrl}}" />
+        <view class="user_icon_wrap">
+          <image class="user_icon" src="{{userInfo.avatarUrl}}" />
+          <view class="user_name">{{userInfo.nickName}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="login">
+        <navigator url="../login/login">去登录</navigator>
+      </view>
+    </block>
+  </view>
+  <view class="user_content">
+    <view class="user_main">
+      <!-- 历史足迹 -->
+      <view class="history_wrap">
+        <navigator url="/pages/collect/collect" class="history">
+          <view class="num">0</view>
+          <view class="title">收藏的店铺</view>
+        </navigator>
+        <navigator url="/pages/collect/collect" class="history">
+          <view class="num">{{collectGoodsNum}}</view>
+          <view class="title">收藏的商品</view>
+        </navigator>
+        <navigator url="/pages/collect/collect" class="history">
+          <view class="num">0</view>
+          <view class="title">关注的商品</view>
+        </navigator>
+        <navigator url="/pages/collect/collect" class="history">
+          <view class="num">0</view>
+          <view class="title">我的足迹</view>
+        </navigator>
+      </view>
+      <view class="my_order_wrap">
+        <view class="order_title">我的订单</view>
+        <view class="order_icon_wrap">
+          <view class="icon_wrap">
+            <view class="icon iconfont icon-weibiaoti-"></view>
+            <view class="icon_title">全部订单</view>
+          </view>
+          <view class="icon_wrap">
+            <view class="icon iconfont icon-fukuan"></view>
+            <view class="icon_title">待付款</view>
+          </view>
+          <view class="icon_wrap">
+            <view class="icon iconfont icon-shouhuodizhi"></view>
+            <view class="icon_title">待收货</view>
+          </view>
+          <view class="icon_wrap">
+            <view class="icon iconfont icon-icon"></view>
+            <view class="icon_title">退款/退货</view>
+          </view>
+        </view>
+      </view>
+      <view class="address_wrap">
+        <view class="address">收货地址管理</view>
+      </view>
+      <view class="contact_wrap">
+        <view class="contact_service_wrap">
+          <view class="contact_service">联系客服</view>
+          <view class="phone_number">176-8387-3784</view>
+        </view>
+        <navigator url="../feedback/feedback" class="contact_service_wrap feedback">
+          <view class="contact_service">意见反馈</view>
+        </navigator>
+        <view class="contact_service_wrap aboutus">
+          <view class="contact_service">关于我们</view>
+        </view>
+      </view>
+      <view class="share_wrap">
+        <view class="share">把应用推荐给其他人</view>
+      </view>
+    </view>
+  </view>
+</view>

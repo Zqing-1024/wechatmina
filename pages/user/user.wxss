@@ -1,0 +1,156 @@
+/* 页面背景颜色 */
+page {
+  background-color: #edece8;
+}
+/* 头像资料css */
+.user_image_wrap {
+  height: 45vh;
+  background-color: var(--themeColor);
+  position: relative;
+}
+.user_image_wrap .user_image .user_bg {
+  height: 50vh;
+  filter: blur(10rpx);
+}
+.user_image_wrap .user_image .user_icon_wrap {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_image_wrap .user_image .user_icon_wrap .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: var(--themeColor) 2rpx solid;
+}
+.user_image_wrap .user_image .user_icon_wrap .user_name {
+  margin-top: 40rpx;
+  color: var(--themeColor);
+  font-weight: 500;
+  font-size: 40rpx;
+}
+/* 登录按钮css */
+.user_image_wrap .login {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+  border: #c3c3c3 6rpx solid;
+  border-radius: 10rpx;
+}
+.user_image_wrap .login navigator {
+  color: #c3c3c3;
+  padding: 20rpx;
+  font-size: 40rpx;
+}
+/* 个人中心内容css */
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  position: absolute;
+  left: 50%;
+  width: 93%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+/* 我的足迹 收藏 css */
+.user_content .user_main .history_wrap {
+  display: flex;
+  background-color: #fff;
+  height: 110rpx;
+  border: #c3c3c3 1rpx solid;
+  margin-bottom: 10rpx;
+}
+.user_content .user_main .history_wrap .history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_content .user_main .history_wrap .history .num {
+  color: var(--themeColor);
+}
+.user_content .user_main .history_wrap .history .title {
+  color: #575757;
+}
+/* 我的订单css */
+.user_content .user_main .my_order_wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: #c3c3c3 1rpx solid;
+  color: #575757;
+  margin-bottom: 10rpx;
+}
+.user_content .user_main .my_order_wrap .order_title {
+  height: 100rpx;
+  border-bottom: #c3c3c3 1rpx solid;
+  line-height: 100rpx;
+  padding-left: 15rpx;
+}
+.user_content .user_main .my_order_wrap .order_icon_wrap {
+  display: flex;
+  height: 140rpx;
+}
+.user_content .user_main .my_order_wrap .order_icon_wrap .icon_wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user_content .user_main .my_order_wrap .order_icon_wrap .icon_wrap .icon {
+  font-size: 40rpx;
+  color: var(--themeColor);
+}
+/* 收货地址管理 */
+.user_content .user_main .address_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: #c3c3c3 1rpx solid;
+  color: #575757;
+  margin-bottom: 10rpx;
+}
+.user_content .user_main .address_wrap .address {
+  padding: 26rpx;
+}
+
+/* 联系我们css */
+.user_content .user_main .contact_wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: #c3c3c3 1rpx solid;
+  color: #575757;
+  margin-bottom: 10rpx;
+}
+.user_content .user_main .contact_wrap .contact_service_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26rpx;
+}
+.feedback {
+  border-top: #c3c3c3 1rpx solid;
+}
+.aboutus {
+  border-top: #c3c3c3 1rpx solid;
+}
+/* 分享 */
+.user_content .user_main .share_wrap {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border: #c3c3c3 1rpx solid;
+  color: #575757;
+  margin-bottom: 10rpx;
+}
+.user_content .user_main .share_wrap .share {
+  padding: 26rpx;
+}

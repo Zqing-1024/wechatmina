@@ -1,0 +1,3 @@
+<button plain="{{true}}" type="primary" open-type="getUserInfo" bindgetuserinfo="login" style="margin-top:40rpx">
+  点我登录
+</button>

@@ -1,0 +1,30 @@
+<view class="category">
+  <!-- 搜索框区域 -->
+  <SearchInput></SearchInput>
+  <view class="category_container">
+    <!-- 左侧分类区域 -->
+    <scroll-view scroll-y class="left_menu">
+      <view class="menu_item1 {{index===currentIndex?'active':''}}" wx:for="{{categoryList}}" wx:for-index="index" wx:for-item="item" wx:key="cat_id" bind:tap="leftTap" data-index="{{index}}">
+        {{item}}
+      </view>
+    </scroll-view>
+    <!-- 右侧商品内容区域 -->
+    <scroll-view class="right_menu" scroll-y scroll-top="{{scrollTopRight}}">
+      <view class="right_container" wx:for="{{rightList}}" wx:key="cat_id" wx:for-item="item1" wx:for-index="index1">
+        <!-- 右侧标题 -->
+        <view class="right_title">
+          <text class="delimiter" decode="{{true}}">/&nbsp;</text>
+          <text>{{item1.cat_name}}</text>
+          <text class="delimiter" decode="{{true}}">&nbsp;/</text>
+        </view>
+        <!-- 右侧商品列表 -->
+        <view class="right_list">
+          <navigator wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id" url="../goods_list/goods_list?cid={{item2.cat_id}}">
+            <image mode="widthFix" src="{{item2.cat_icon}}" lazy-load="{{true}}"></image>
+            <view class="goods_name">{{item2.cat_name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

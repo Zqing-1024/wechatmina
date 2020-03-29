@@ -1,0 +1,33 @@
+<!-- 意见反馈页面 -->
+<view class="feedback">
+  <tabs tabs="{{tabs}}" binditemTapIndex="tabsItemTapChange">
+    <block wx:if="{{tabs[0].isActive==true}}">
+      <view class="fb_mian">
+        <view class="fb_title">问题的种类</view>
+        <view class="fb_tips">
+          <text class="tip">功能建议</text>
+          <text class="tip">购买遇到问题</text>
+          <text class="tip">性能问题</text>
+          <text class="tip">其他</text>
+        </view>
+        <view class="fb_content">
+          <textarea placeholder="请描述您的问题" value="{{textValue}}" bindinput="textInputchange"></textarea>
+          <view class="fb_tool">
+            <button bind:tap="chooseImages">+</button>
+            <view wx:for="{{chooseImages}}" wx:key="*this" wx:for-item="item" wx:for-index="index" bind:tap="removeImage" data-index="{{index}}">
+              <SendImg src="{{item}}"></SendImg>
+            </view>
+          </view>
+        </view>
+        <view class="form_btn_wrap">
+          <!-- 没有后台接口 前端模拟伪提交 -->
+          <button type="warn" bind:tap="formSubmit">
+            <icon class="" type="success_no_circle" size="23" color="white"></icon>
+            提交
+          </button>
+        </view>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive==true}}">1</block>
+  </tabs>
+</view>

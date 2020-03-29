@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabs": "../../components/tabs/tabs",
+    "SendImg": "../../components/SendImg/SendImg"
+  },
+  "navigationBarTitleText": "意见反馈"
+}
